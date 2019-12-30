@@ -2,6 +2,12 @@
 
 ---
 
+# everyday
+
+This is an [everyday calendar](https://www.kickstarter.com/projects/simonegiertz/the-every-day-calendar) / streak tracker that I'm writing to learn [Svelte](https://svelte.dev).
+
+More here once I've written something.
+
 # svelte app
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
