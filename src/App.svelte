@@ -3,7 +3,7 @@
 
 	1. DONE Create a simple day component within App.svelte
 	2. DONE Add event handler for click to toggle complete state for that day
-	3. Refactor day component into day.svelte file and import into app.svelte
+	3. DONE Refactor day component into day.svelte file and import into app.svelte
 	4. Write a loop to create a week's worth of day components
 	5. Add a Svelte store for persisting the state of those components
 	6. Wire up the Svelte store to local browser storage
@@ -14,28 +14,21 @@
 -->
 
 <script>
-	export let clicked = false;
-
-	function handleClick() {
-		clicked = !clicked;
-	}
+import Day from './Day.svelte'
 </script>
 
 <main>
-	<div on:click={handleClick} class={clicked ? 'selected': ''}></div>
+	<Day />
+	<Day />
+	<Day />
+	<Day />
 </main>
 
 <style>
-	div {
-		/* TODO: parameterize height once refactored into component */
-	 	height: 50px; 
-		width: 50px;
-		background-color: black;
-	}
-
-	.selected {
-		background-color: yellow;
-	}
+    main {
+            max-width: 240px;
+            margin: 0 auto;
+    }
 
 	@media (min-width: 640px) {
 		main {
