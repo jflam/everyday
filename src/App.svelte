@@ -7,7 +7,7 @@
 	4. DONE Write a loop to create a month's worth of day components
 	5. DONE Write a loop to create a year's worth of day components
 	6. DONE Make CSS table responsive
-	7. Make CSS table printable
+	7. DONE Make CSS table printable
 	8. Add a Svelte store for persisting the state of those components
 	9. Wire up the Svelte store to local browser storage
 	10. Create some designs for the 365 calendar (perhaps modeled after the github activity tracker)
@@ -45,7 +45,7 @@ const daysInJan = daysInMonth(1, year);
 <style>
 	div {
 		display: flex;
-		width: 100%;
+		width: 50%;
 		table-layout: fixed;
 	}
 	div > div {
@@ -54,4 +54,7 @@ const daysInJan = daysInMonth(1, year);
     main {
         margin: 0 auto;
     }
+	@media print {
+		main { transform: scale(0.9) }
+	}
 </style>

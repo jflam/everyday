@@ -10,14 +10,14 @@
 
 <style>
 	div {
-		/* TODO: parameterize height once refactored into component */
+        border: solid black;
 	 	height: 20px; 
 		width: 20px;
-		background-color: black;
+		background-color: white;
         margin: 5px;
 	}
 
 	.selected {
-		background-color: blue;
+		background-color: green;
 	}
 </style>
