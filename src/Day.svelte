@@ -1,5 +1,5 @@
 <script>
-	export let clicked = false;
+    export let clicked = false;
 
 	function handleClick() {
 		clicked = !clicked;
@@ -11,8 +11,8 @@
 <style>
 	div {
 		/* TODO: parameterize height once refactored into component */
-	 	height: 50px; 
-		width: 50px;
+	 	height: 20px; 
+		width: 20px;
 		background-color: black;
         margin: 5px;
 	}
