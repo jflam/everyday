@@ -19,7 +19,7 @@
 <script>
 import Day from './Day.svelte'
 
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const headings = ['Day', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 function daysInMonth (month, year) { 
     return new Date(year, month, 0).getDate(); 
@@ -29,32 +29,36 @@ const year = 2020;
 const daysInJan = daysInMonth(1, year);
 </script>
 
-<main>
 <div>
-	{#each months as month, month_index}
-	<div>
-		{month}
-		{#each Array(daysInMonth(month_index + 1, year)) as _, i}
-			<Day />
+	{#each headings as heading, i}
+		<div style="--column:{i + 1}; --row:{1}">{heading}</div>
+	{/each}
+	{#each Array(31) as _, i}
+		<div style="--column:{1}; --row:{i + 2}">{i + 1}</div>
+	{/each}
+	{#each Array(12) as _, i}
+		{#each Array(daysInMonth(i + 1, year)) as _, j}
+			<Day column={i + 2} row={j + 2}/>
 		{/each}
-	</div>
 	{/each}
 </div>
-</main>
 
 <style>
 	div {
-		display: flex;
-		width: 50%;
-		table-layout: fixed;
+		display: grid;
 	}
 	div > div {
-		display: table-cell;
+		grid-column: var(--column);
+		grid-row: var(--row);
+		margin: 5px;
 	}
-    main {
-        margin: 0 auto;
-    }
 	@media print {
-		main { transform: scale(0.9) }
+		@page {
+			margin: 0 auto;
+		}
+		div { 
+			transform-origin: top left;
+			transform: scale(0.8);
+		} 
 	}
 </style>
