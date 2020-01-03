@@ -10,8 +10,8 @@
 	7. DONE Make CSS table printable
 	8. DONE Create CSS tooltips that show the dates
 	9. Make CSS tooltips dynamic, i.e., on right side of screen they display whole tooltip vs. clipping
-	10. Add a Svelte store for persisting the state of those components
-	11. Wire up the Svelte store to local browser storage
+	10. DONE: Add a Svelte store for persisting the state of those components
+	11. DONE: Wire up the Svelte store to local browser storage
 	12. Create some designs for the 365 calendar (perhaps modeled after the github activity tracker)
 	13. Add routes that accomodate different goals (e.g., floss or cook meal)
 	14. Add a way to synchronize user state to an OAuth based file store, e.g., Dropbox or OneDrive
